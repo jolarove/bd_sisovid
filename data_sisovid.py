@@ -11,7 +11,6 @@ import re #para usar expresiones regulares
 import json #para manipular archivos json
 import pandas as pd #para los data frames
 
-
 #definimos la función para la extracción
 def extract_json(pattern, html_content):
     json_match = pattern.search(html_content) #comparamos y buscamos el pattern con el html extraido
