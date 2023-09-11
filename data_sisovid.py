@@ -152,6 +152,11 @@ sin_dato_df = pd.DataFrame(sin_dato)
 desaparecidos_municipios = pd.concat([desaparecidos_municipios_prev, sin_dato_df])
 desaparecidos_municipios.to_csv(f'{ruta_destino_bd_limpia}bd_desaparecidos_municipios.csv', index=False) #exportamos
 
+#limpiamos bd_anio_denuncia
+columnas_a_eliminar = ['id_denuncia', 'id_reporte']
+tiempo_denuncia.drop(columnas_a_eliminar, axis=1, inplace=True)
+tiempo_denuncia.to_csv(f'{ruta_destino_bd_limpia}bd_anio_denuncia.csv', index=False)
+
 #NOTAS
 #La base de datos para municipios sólo contempla las denuncias. No tiene datos a nivel municipal de los reportes de cédulas
 #Aún así, la suma total de los casos por municipio no concuerda con el total de las denuncias. En este ejercicio las catalogué como 'Sin dato'
