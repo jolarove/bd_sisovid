@@ -66,7 +66,7 @@ for key, pattern in json_patterns.items():
         data_dict[key] = data
 
 #carpeta de destino de los df creados
-ruta = 'sisovid/oct/' #cuando sea agosto, creamos la carpeta en la raiz con el nombre 'ago' y cambiamos jul por ago
+ruta = 'sisovid/nov/' #cuando sea agosto, creamos la carpeta en la raiz con el nombre 'ago' y cambiamos jul por ago
 ruta_destino_bd_limpia = f'{ruta}bd_limpias/'
 ruta_destino_bd_sisovid = f'{ruta}bd_sisovid/'
 #importamos los municipios
